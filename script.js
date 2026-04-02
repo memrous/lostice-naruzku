@@ -79,8 +79,8 @@
 (function () {
   const observerOptions = {
     root: null,
-    rootMargin: '0px 0px -80px 0px',
-    threshold: 0.12,
+    rootMargin: '0px 0px -20px 0px',
+    threshold: 0.05,
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -128,47 +128,100 @@
   counters.forEach(c => countObserver.observe(c));
 })();
 
-/* ========== 6. GALLERY STRIP — DRAG TO SCROLL ========== */
+/* ========== 6. GALLERY STRIP — Infinite RAF Loop ========== */
 (function () {
   const strip = document.getElementById('gallery-strip');
   if (!strip) return;
 
-  let isDown  = false;
-  let startX;
-  let scrollLeft;
+  // Clone all original items once so the strip is 2× wide (seamless loop)
+  const origItems = Array.from(strip.children);
+  origItems.forEach(item => {
+    const clone = item.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    strip.appendChild(clone);
+  });
 
-  // Pause auto-scroll animation on user interaction
-  function pauseAnimation() {
-    strip.classList.add('no-animation');
-    strip.style.transform = 'none';
+  const SPEED   = 0.55;   // px per frame (~33px/s at 60fps)
+  let pos       = 0;
+  let paused    = false;
+  let rafId     = null;
+
+  // Dragging state
+  let isDragging    = false;
+  let dragStartX    = 0;
+  let dragStartPos  = 0;
+
+  function getHalfWidth() {
+    // Half the total strip width = width of one original set
+    return strip.scrollWidth / 2;
   }
 
+  function clampPos(p) {
+    const half = getHalfWidth();
+    // Keep position in range [-half, 0) for seamless loop
+    if (p <= -half) p += half;
+    if (p > 0)      p -= half;
+    return p;
+  }
+
+  function tick() {
+    if (!paused && !isDragging) {
+      pos = clampPos(pos - SPEED);
+      strip.style.transform = `translateX(${pos}px)`;
+    }
+    rafId = requestAnimationFrame(tick);
+  }
+
+  rafId = requestAnimationFrame(tick);
+
+  // ── Hover pause (desktop) ──────────────────────────────────
+  strip.addEventListener('mouseenter', () => { paused = true; });
+  strip.addEventListener('mouseleave', () => {
+    paused = false;
+    if (!isDragging) strip.style.cursor = 'grab';
+  });
+
+  // ── Mouse drag ─────────────────────────────────────────────
   strip.addEventListener('mousedown', (e) => {
-    isDown = true;
-    pauseAnimation();
+    isDragging   = true;
+    dragStartX   = e.clientX;
+    dragStartPos = pos;
     strip.style.cursor = 'grabbing';
-    startX    = e.pageX - strip.offsetLeft;
-    scrollLeft = strip.parentElement.scrollLeft;
   });
 
-  strip.addEventListener('mouseleave', () => { isDown = false; strip.style.cursor = 'grab'; });
-  strip.addEventListener('mouseup',    () => { isDown = false; strip.style.cursor = 'grab'; });
-
-  strip.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x    = e.pageX - strip.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    strip.parentElement.scrollLeft = scrollLeft - walk;
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const dx = e.clientX - dragStartX;
+    pos = clampPos(dragStartPos + dx);
+    strip.style.transform = `translateX(${pos}px)`;
   });
 
-  // Touch events
-  let touchStartX = 0;
+  window.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    strip.style.cursor = 'grab';
+    paused = false;
+  });
+
+  // ── Touch drag ─────────────────────────────────────────────
   strip.addEventListener('touchstart', (e) => {
-    touchStartX = e.touches[0].clientX;
-    pauseAnimation();
+    isDragging   = true;
+    dragStartX   = e.touches[0].clientX;
+    dragStartPos = pos;
   }, { passive: true });
+
+  strip.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const dx = e.touches[0].clientX - dragStartX;
+    pos = clampPos(dragStartPos + dx);
+    strip.style.transform = `translateX(${pos}px)`;
+  }, { passive: true });
+
+  strip.addEventListener('touchend', () => {
+    isDragging = false;
+  });
 })();
+
 
 /* ========== 7. CONTACT FORM SUBMIT ========== */
 (function () {
