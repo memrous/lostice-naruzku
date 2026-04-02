@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jídelní lístek Restaurace Na Růžku v Lošticích — polévky, hlavní jídla, dezerty, nápoje. Tradiční česká kuchyně za přijatelné ceny." />
+  <title>Jídelní lístek — Restaurace Na Růžku Loštice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body class="menu-page">
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">🍴</span>
+        <span class="logo-text">Na Růžku</span>
+      </a>
+      <nav class="nav-links" role="navigation" aria-label="Hlavní navigace">
+        <a href="menu.html" class="nav-link nav-link-active">Jídelní lístek</a>
+        <a href="index.html#hours" class="nav-link">Otevírací doba</a>
+        <a href="index.html#gallery" class="nav-link">Galerie</a>
+        <a href="index.html#events" class="nav-link">Akce</a>
+        <a href="index.html#contact" class="nav-link">Kontakt</a>
+        <a href="index.html#contact" class="nav-cta">Rezervovat stůl</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="menu.html" class="mobile-link">Jídelní lístek</a>
+      <a href="index.html#hours" class="mobile-link">Otevírací doba</a>
+      <a href="index.html#gallery" class="mobile-link">Galerie</a>
+      <a href="index.html#events" class="mobile-link">Akce</a>
+      <a href="index.html#contact" class="mobile-link">Kontakt</a>
+      <a href="index.html#contact" class="mobile-cta">Rezervovat stůl</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== MENU HERO ========== -->
+    <section class="menu-hero">
+      <div class="menu-hero-overlay"></div>
+      <div class="menu-hero-content">
+        <span class="hero-tag">🍽 Čerstvě připraveno</span>
+        <h1 class="menu-hero-title">Jídelní lístek</h1>
+        <p class="menu-hero-sub">Tradiční česká kuchyně s láskou a poctivými surovinami</p>
+        <div class="menu-hero-note">
+          <span>⏰ Denní menu Po–Pá · 10:30–14:00</span>
+          <span class="note-sep">·</span>
+          <span>🍜 Držková každý pátek</span>
+          <span class="note-sep">·</span>
+          <span>💳 Přijímáme stravenky</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STICKY CATEGORY TABS ========== -->
+    <nav class="menu-tabs-bar" id="menu-tabs-bar" aria-label="Kategorie jídel">
+      <div class="menu-tabs-inner">
+        <a href="#denni-menu"   class="menu-tab active" data-target="denni-menu">Denní menu</a>
+        <a href="#polevky"      class="menu-tab" data-target="polevky">Polévky</a>
+        <a href="#predkrmy"     class="menu-tab" data-target="predkrmy">Předkrmy</a>
+        <a href="#hlavni-jidla" class="menu-tab" data-target="hlavni-jidla">Hlavní jídla</a>
+        <a href="#bezm-jidla"   class="menu-tab" data-target="bezm-jidla">Bezmasá</a>
+        <a href="#prilohy"      class="menu-tab" data-target="prilohy">Přílohy</a>
+        <a href="#dezerty"      class="menu-tab" data-target="dezerty">Dezerty</a>
+        <a href="#napoje"       class="menu-tab" data-target="napoje">Nápoje</a>
+      </div>
+    </nav>
+
+    <!-- ========== MENU CONTENT ========== -->
+    <div class="menu-content">
+      <div class="menu-container">
+
+        <!-- ALLERGEN NOTE -->
+        <div class="allergen-note reveal">
+          <span class="allergen-icon">ℹ️</span>
+          <p>Informace o alergenech vám rádi sdělíme na místě. Všechna jídla jsou připravována čerstvě z lokálních surovin. Na žádost upravíme jídlo dle vašich preferencí.</p>
+        </div>
+
+        <!-- ======= DENNÍ MENU ======= -->
+        <section class="menu-section-block" id="denni-menu">
+          <div class="menu-section-header reveal">
+            <div class="menu-section-label">
+              <span class="menu-section-icon">☀️</span>
+              <div>
+                <h2 class="menu-section-title">Denní menu</h2>
+                <p class="menu-section-note">Pondělí – Pátek · 10:30 – 14:00 · Polévka + hlavní jídlo</p>
+              </div>
+            </div>
+            <span class="menu-section-badge">Každý den jinak</span>
+          </div>
+
+          <div class="daily-menu-grid reveal">
+            <div class="daily-card">
+              <div class="daily-header">
+                <span class="daily-num">Menu 1</span>
+                <span class="daily-price">130 Kč</span>
+              </div>
+              <p class="daily-soup">🍲 Polévka dne (mění se každý den)</p>
+              <p class="daily-main">Svíčková na smetaně s houskovým knedlíkem a brusinkami</p>
+            </div>
+            <div class="daily-card daily-card-alt">
+              <div class="daily-header">
+                <span class="daily-num">Menu 2</span>
+                <span class="daily-price">135 Kč</span>
+              </div>
+              <p class="daily-soup">🍲 Polévka dne (mění se každý den)</p>
+              <p class="daily-main">Kuřecí prsa na bylinkách s bramborovou kaší a zeleninou</p>
+            </div>
+            <div class="daily-card">
+              <div class="daily-header">
+                <span class="daily-num">Menu 3</span>
+                <span class="daily-price">125 Kč</span>
+              </div>
+              <p class="daily-soup">🍲 Polévka dne (mění se každý den)</p>
+              <p class="daily-main">Smažený vepřový řízek s bramborovým salátem a citronem</p>
+            </div>
+          </div>
+          <p class="daily-info reveal">📞 Aktuální denní menu zjistíte telefonicky na <a href="tel:+420583445282">583 445 282</a> nebo na našem <a href="https://facebook.com" target="_blank" rel="noopener">Facebooku</a>.</p>
+        </section>
+
+        <!-- ======= POLÉVKY ======= -->
+        <section class="menu-section-block" id="polevky">
+          <div class="menu-section-header reveal">
+            <div class="menu-section-label">
+              <span class="menu-section-icon">🍜</span>
+              <div>
+                <h2 class="menu-section-title">Polévky</h2>
+                <p class="menu-section-note">Čerstvě vařené každý den</p>
+              </div>
+            </div>
+          </div>
+          <div class="dish-list reveal">
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Vývar z domácí slepice s nudlemi</span>
+                <span class="dish-desc">Tradiční čirý vývar, nudličky, petrželka · 300 ml</span>
+              </div>
+              <span class="dish-price">39 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Česnečka se sýrem a opečeným chlebem</span>
+                <span class="dish-desc">Hustá česneková polévka, strouhaný eidam, krutony · 300 ml</span>
+              </div>
+              <span class="dish-price">49 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Gulášová polévka</span>
+                <span class="dish-desc">Hovězí maso, paprika, cibule, kmín · 300 ml</span>
+              </div>
+              <span class="dish-price">55 Kč</span>
+            </div>
+            <div class="dish-item dish-special">
+              <div class="dish-info">
+                <span class="dish-name">Držková polévka <span class="dish-tag">Páteční specialita</span></span>
+                <span class="dish-desc">Tradiční hustá polévka z hovězích drštek, majoránka, kmín · 300 ml</span>
+              </div>
+              <span class="dish-price">59 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Zeleninová minestrone</span>
+                <span class="dish-desc">Sezónní zelenina, těstoviny, rajčata, bazalka · 300 ml</span>
+              </div>
+              <span class="dish-price">45 Kč</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ======= PŘEDKRMY ======= -->
+        <section class="menu-section-block" id="predkrmy">
+          <div class="menu-section-header reveal">
+            <div class="menu-section-label">
+              <span class="menu-section-icon">🧀</span>
+              <div>
+                <h2 class="menu-section-title">Předkrmy & saláty</h2>
+                <p class="menu-section-note">Skvělý začátek každého jídla</p>
+              </div>
+            </div>
+          </div>
+          <div class="dish-list reveal">
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Nakládaný hermelín</span>
+                <span class="dish-desc">Hermelín v oleji s česnekem, paprikou a cibulí, pečivo</span>
+              </div>
+              <span class="dish-price">99 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Šunkový závitek se sýrem a okurkou</span>
+                <span class="dish-desc">Vepřová šunka, smetanový sýr, nakládaná okurka, zelenina</span>
+              </div>
+              <span class="dish-price">109 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Topinka s česnekem a slaninou</span>
+                <span class="dish-desc">Opečený chléb, česnek, uzená slanina, paprika</span>
+              </div>
+              <span class="dish-price">69 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Caesar salát s kuřecím masem</span>
+                <span class="dish-desc">Římský salát, grilované kuře, parmezán, krutony, Caesar dresink</span>
+              </div>
+              <span class="dish-price">145 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Míšený zeleninový salát</span>
+                <span class="dish-desc">Čerstvá zelenina, olivový olej, bylinky, vinaigrette</span>
+              </div>
+              <span class="dish-price">89 Kč</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ======= HLAVNÍ JÍDLA ======= -->
+        <section class="menu-section-block" id="hlavni-jidla">
+          <div class="menu-section-header reveal">
+            <div class="menu-section-label">
+              <span class="menu-section-icon">🥩</span>
+              <div>
+                <h2 class="menu-section-title">Hlavní jídla</h2>
+                <p class="menu-section-note">Tradiční česká kuchyně, poctivé porce</p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="dish-category-title reveal">🐄 Hovězí</h3>
+          <div class="dish-list reveal">
+            <div class="dish-item dish-featured">
+              <div class="dish-info">
+                <span class="dish-name">Svíčková na smetaně <span class="dish-tag dish-tag-gold">Klasika</span></span>
+                <span class="dish-desc">Hovězí svíčková, jemná smetanová omáčka, houskový knedlík, brusinky, šlehačka</span>
+              </div>
+              <span class="dish-price">199 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Hovězí guláš s knedlíkem</span>
+                <span class="dish-desc">Poctivý guláš z hovězí kližky, paprika, kmín, cibule, houskový knedlík</span>
+              </div>
+              <span class="dish-price">179 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Hovězí roštěná na smetaně</span>
+                <span class="dish-desc">Plátky hovězí roštěné, slanina, cibule, smetana, knedlík</span>
+              </div>
+              <span class="dish-price">215 Kč</span>
+            </div>
+          </div>
+
+          <h3 class="dish-category-title reveal">🐷 Vepřové</h3>
+          <div class="dish-list reveal">
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Vepřová pečeně se zelím a knedlíkem</span>
+                <span class="dish-desc">Pečená vepřová kýta, dušené zelí, houskový nebo bramborový knedlík</span>
+              </div>
+              <span class="dish-price">189 Kč</span>
+            </div>
+            <div class="dish-item dish-featured">
+              <div class="dish-info">
+                <span class="dish-name">Vepřové koleno se zelím a chlebem <span class="dish-tag dish-tag-gold">Specialita</span></span>
+                <span class="dish-desc">Pečené vepřové koleno, křupavá kůže, dušené zelí, hořčice, domácí chléb · cca 1,2 kg</span>
+              </div>
+              <span class="dish-price">259 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Smažený vepřový řízek</span>
+                <span class="dish-desc">Klasický smažený řízek v trojobalu, bramborový salát, plátěk citronu</span>
+              </div>
+              <span class="dish-price">175 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Vepřový bůček na česneku</span>
+                <span class="dish-desc">Pomalu pečený bůček, česnek, majoránka, brambory nebo zelí</span>
+              </div>
+              <span class="dish-price">185 Kč</span>
+            </div>
+          </div>
+
+          <h3 class="dish-category-title reveal">🐔 Drůbež & ryby</h3>
+          <div class="dish-list reveal">
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Kuřecí prsa na bylinkách</span>
+                <span class="dish-desc">Grilovaná kuřecí prsa, rozmarýn, tymián, brambory, zelenina</span>
+              </div>
+              <span class="dish-price">185 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Kuřecí stehno na paprice</span>
+                <span class="dish-desc">Kuřecí stehno, sladká paprika, smetana, těstoviny nebo rýže</span>
+              </div>
+              <span class="dish-price">169 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Pstruh na másle s mandlemi</span>
+                <span class="dish-desc">Říční pstruh, máslová omáčka, plátky mandlí, vařené brambory, bylinkové máslo</span>
+              </div>
+              <span class="dish-price">219 Kč</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ======= BEZMASÁ JÍDLA ======= -->
+        <section class="menu-section-block" id="bezm-jidla">
+          <div class="menu-section-header reveal">
+            <div class="menu-section-label">
+              <span class="menu-section-icon">🥦</span>
+              <div>
+                <h2 class="menu-section-title">Bezmasá jídla</h2>
+                <p class="menu-section-note">Pro vegetariány i milovníky lehčí kuchyně</p>
+              </div>
+            </div>
+          </div>
+          <div class="dish-list reveal">
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Smažený sýr s tatarskou omáčkou</span>
+                <span class="dish-desc">Smažený eidam v trojobalu, domácí tatarská omáčka, bramborový salát nebo hranolky</span>
+              </div>
+              <span class="dish-price">159 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Smažené žampiony s bramborovým salátem</span>
+                <span class="dish-desc">Velké čepice žampionů v křupavém těstíčku, tatarská omáčka, domácí salát</span>
+              </div>
+              <span class="dish-price">165 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Zeleninová omeleta se sýrem</span>
+                <span class="dish-desc">Vejce, sezónní zelenina, eidam, pečivo, zeleninový salát</span>
+              </div>
+              <span class="dish-price">145 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Těstovinový salát s mozzarellou</span>
+                <span class="dish-desc">Fusilli, cherry rajčata, mozzarella, bazalka, olivový olej, rukola</span>
+              </div>
+              <span class="dish-price">155 Kč</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ======= PŘÍLOHY ======= -->
+        <section class="menu-section-block" id="prilohy">
+          <div class="menu-section-header reveal">
+            <div class="menu-section-label">
+              <span class="menu-section-icon">🥔</span>
+              <div>
+                <h2 class="menu-section-title">Přílohy</h2>
+                <p class="menu-section-note">K doplnění hlavních jídel</p>
+              </div>
+            </div>
+          </div>
+          <div class="dish-list sides-list reveal">
+            <div class="dish-item">
+              <div class="dish-info"><span class="dish-name">Houskový knedlík (4 plátky)</span></div>
+              <span class="dish-price">39 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info"><span class="dish-name">Bramborový knedlík (3 kusy)</span></div>
+              <span class="dish-price">45 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info"><span class="dish-name">Bramborová kaše</span></div>
+              <span class="dish-price">42 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info"><span class="dish-name">Vařené brambory s máslem</span></div>
+              <span class="dish-price">39 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info"><span class="dish-name">Hranolky</span></div>
+              <span class="dish-price">49 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info"><span class="dish-name">Dušené zelí</span></div>
+              <span class="dish-price">35 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info"><span class="dish-name">Rýže</span></div>
+              <span class="dish-price">35 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info"><span class="dish-name">Bramborový salát</span></div>
+              <span class="dish-price">45 Kč</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ======= DEZERTY ======= -->
+        <section class="menu-section-block" id="dezerty">
+          <div class="menu-section-header reveal">
+            <div class="menu-section-label">
+              <span class="menu-section-icon">🍰</span>
+              <div>
+                <h2 class="menu-section-title">Dezerty</h2>
+                <p class="menu-section-note">Sladký závěr vašeho jídla</p>
+              </div>
+            </div>
+          </div>
+          <div class="dish-list reveal">
+            <div class="dish-item dish-featured">
+              <div class="dish-info">
+                <span class="dish-name">Jablečný štrúdl s vanilkovou zmrzlinou <span class="dish-tag dish-tag-gold">Doporučujeme</span></span>
+                <span class="dish-desc">Listové těsto, dušená jablka, skořice, rozinky, vanilkový pohár, šlehačka</span>
+              </div>
+              <span class="dish-price">89 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Palačinky s domácím džemem a šlehačkou</span>
+                <span class="dish-desc">Tři tlusté palačinky, domácí meruňkový džem, šlehačka, moučkový cukr</span>
+              </div>
+              <span class="dish-price">79 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Zmrzlinový pohár</span>
+                <span class="dish-desc">Tři kopečky zmrzliny dle výběru, šlehačka, čokoládová poleva, oříšky</span>
+              </div>
+              <span class="dish-price">89 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Tiramisu</span>
+                <span class="dish-desc">Italský dezert, piškoty, mascarpone, espresso, kakao, amaretto</span>
+              </div>
+              <span class="dish-price">95 Kč</span>
+            </div>
+            <div class="dish-item">
+              <div class="dish-info">
+                <span class="dish-name">Ovocný pohár</span>
+                <span class="dish-desc">Sezónní ovoce, vanilková zmrzlina, šlehačka, mátový sirup</span>
+              </div>
+              <span class="dish-price">75 Kč</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ======= NÁPOJE ======= -->
+        <section class="menu-section-block" id="napoje">
+          <div class="menu-section-header reveal">
+            <div class="menu-section-label">
+              <span class="menu-section-icon">🍺</span>
+              <div>
+                <h2 class="menu-section-title">Nápoje</h2>
+                <p class="menu-section-note">Nealkoholické · Pivo · Víno · Káva</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="drinks-grid reveal">
+
+            <div class="drinks-col">
+              <h3 class="drinks-cat">🥤 Nealkoholické</h3>
+              <div class="dish-list">
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Kohoutkova voda 0,3l</span></div>
+                  <span class="dish-price free">Zdarma</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Minerální voda Mattoni 0,33l</span></div>
+                  <span class="dish-price">35 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Džus (pomeranč, jablko) 0,2l</span></div>
+                  <span class="dish-price">45 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Kofola 0,5l čepovaná</span></div>
+                  <span class="dish-price">45 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Coca-Cola / Fanta 0,33l</span></div>
+                  <span class="dish-price">49 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Tonic / Sprite 0,2l</span></div>
+                  <span class="dish-price">42 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Limonáda domácí 0,4l</span></div>
+                  <span class="dish-price">55 Kč</span>
+                </div>
+              </div>
+
+              <h3 class="drinks-cat" style="margin-top:1.5rem">☕ Teplé nápoje</h3>
+              <div class="dish-list">
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Espresso</span></div>
+                  <span class="dish-price">45 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Cappuccino</span></div>
+                  <span class="dish-price">55 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Flat White</span></div>
+                  <span class="dish-price">59 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Čaj (různé příchutě)</span></div>
+                  <span class="dish-price">35 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Horká čokoláda</span></div>
+                  <span class="dish-price">59 Kč</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="drinks-col">
+              <h3 class="drinks-cat">🍺 Pivo čepované</h3>
+              <div class="dish-list">
+                <div class="dish-item sm dish-featured">
+                  <div class="dish-info">
+                    <span class="dish-name">Kozel Světlý 11° · 0,5l <span class="dish-tag dish-tag-gold">Doporučujeme</span></span>
+                  </div>
+                  <span class="dish-price">55 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Kozel Světlý 11° · 0,3l</span></div>
+                  <span class="dish-price">39 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Kozel Tmavý 13° · 0,5l</span></div>
+                  <span class="dish-price">58 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Radler (pivo + citron) · 0,5l</span></div>
+                  <span class="dish-price">49 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Nealkoholické pivo · 0,5l</span></div>
+                  <span class="dish-price">49 Kč</span>
+                </div>
+              </div>
+
+              <h3 class="drinks-cat" style="margin-top:1.5rem">🍷 Víno</h3>
+              <div class="dish-list">
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Víno bílé — Welschriesling (sklenka 0,2l)</span></div>
+                  <span class="dish-price">65 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Víno červené — Frankovka (sklenka 0,2l)</span></div>
+                  <span class="dish-price">65 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Rosé — Moravský Müller (sklenka 0,2l)</span></div>
+                  <span class="dish-price">68 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Víno bílé — lahev 0,75l</span></div>
+                  <span class="dish-price">259 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Víno červené — lahev 0,75l</span></div>
+                  <span class="dish-price">269 Kč</span>
+                </div>
+                <div class="dish-item sm">
+                  <div class="dish-info"><span class="dish-name">Prosecco (sklenka 0,15l)</span></div>
+                  <span class="dish-price">79 Kč</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- CTA BLOCK -->
+        <div class="menu-cta-block reveal">
+          <div class="menu-cta-content">
+            <h3>Zaujalo vás naše menu?</h3>
+            <p>Rezervujte si stůl předem, ať máte jistotu místa — zejména o víkendech a státních svátcích.</p>
+            <div class="menu-cta-btns">
+              <a href="tel:+420583445282" class="btn btn-primary">📞 Zavolat a rezervovat</a>
+              <a href="index.html#contact" class="btn btn-outline-dark">Kontaktní formulář</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <span class="logo-icon">🍴</span>
+        <span class="logo-text">Na Růžku</span>
+      </div>
+      <p class="footer-tagline">Restaurace Na Růžku — Loštice</p>
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" id="footer-fb-menu">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.95.93-1.95 1.88v2.26h3.32l-.53 3.5h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+          Facebook
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link footer-social-ig" id="footer-ig-menu">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Instagram
+        </a>
+      </div>
+      <nav class="footer-nav" aria-label="Patičková navigace">
+        <a href="menu.html">Jídelní lístek</a>
+        <a href="index.html#hours">Otevírací doba</a>
+        <a href="index.html#gallery">Galerie</a>
+        <a href="index.html#events">Akce</a>
+        <a href="index.html#contact">Kontakt</a>
+      </nav>
+      <p class="footer-copy">© 2025 Restaurace Na Růžku. Všechna práva vyhrazena.</p>
+      <p class="footer-credit">Web vytvořen s ❤️ pro Loštice</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Menu tabs sticky highlight
+    (function () {
+      const tabs = document.querySelectorAll('.menu-tab');
+      const sections = document.querySelectorAll('.menu-section-block');
+
+      function updateActiveTab() {
+        let current = '';
+        sections.forEach(section => {
+          const top = section.getBoundingClientRect().top;
+          if (top <= 160) current = section.id;
+        });
+        tabs.forEach(tab => {
+          tab.classList.toggle('active', tab.dataset.target === current);
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveTab, { passive: true });
+
+      // Smooth click
+      tabs.forEach(tab => {
+        tab.addEventListener('click', e => {
+          e.preventDefault();
+          const target = document.getElementById(tab.dataset.target);
+          if (target) {
+            const offset = target.getBoundingClientRect().top + window.scrollY - 145;
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

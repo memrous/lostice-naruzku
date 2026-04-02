@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Restaurace Na Růžku v Lošticích — tradiční česká kuchyně, snídaně, obědy i večeře. Rezervujte stůl online. Olomoucká 146, Loštice 789 83." />
+  <meta name="keywords" content="restaurace Loštice, česká kuchyně, Na Růžku, obědy Loštice, snídaně, večeře, jídelní lístek" />
+  <meta property="og:title" content="Restaurace Na Růžku — Loštice" />
+  <meta property="og:description" content="Uvařeno s láskou, servírováno s úsměvem. Tradiční česká kuchyně v Lošticích." />
+  <meta property="og:type" content="website" />
+  <title>Restaurace Na Růžku — Loštice | Česká kuchyně</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="nav-logo-link">
+        <span class="logo-icon">🍴</span>
+        <span class="logo-text">Na Růžku</span>
+      </a>
+      <nav class="nav-links" id="nav-links" role="navigation" aria-label="Hlavní navigace">
+        <a href="menu.html" class="nav-link">Jídelní lístek</a>
+        <a href="#hours" class="nav-link">Otevírací doba</a>
+        <a href="#gallery" class="nav-link">Galerie</a>
+        <a href="#events" class="nav-link">Akce</a>
+        <a href="#contact" class="nav-link">Kontakt</a>
+        <a href="#contact" class="nav-cta" id="nav-cta-btn">Rezervovat stůl</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="menu.html" class="mobile-link">Jídelní lístek</a>
+      <a href="#hours" class="mobile-link">Otevírací doba</a>
+      <a href="#gallery" class="mobile-link">Galerie</a>
+      <a href="#events" class="mobile-link">Akce</a>
+      <a href="#contact" class="mobile-link">Kontakt</a>
+      <a href="#contact" class="mobile-cta">Rezervovat stůl</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <!-- floating blobs -->
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <!-- grain overlay -->
+      <div class="grain-overlay"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <span class="hero-tag">🍽 Restaurace v Lošticích</span>
+        <h1 class="hero-title">Uvařeno s láskou,<br>servírováno s úsměvem.</h1>
+        <p class="hero-subtitle">Tradiční česká kuchyně, snídaně, obědy i večeře.<br>72 míst, venkovní terasa, salónek pro akce.</p>
+        <div class="hero-btns">
+          <a href="menu.html" class="btn btn-primary" id="hero-menu-btn">Zobrazit jídelní lístek</a>
+          <a href="#contact" class="btn btn-outline" id="hero-reserve-btn">Rezervovat stůl</a>
+        </div>
+      </div>
+
+      <a href="#highlights" class="scroll-indicator" aria-label="Scrollovat níže">
+        <div class="chevron-bounce">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </a>
+    </section>
+
+    <!-- ========== HIGHLIGHTS BAR ========== -->
+    <section class="highlights" id="highlights">
+      <div class="highlights-inner">
+        <div class="highlight-item reveal-left">
+          <span class="highlight-icon">⏰</span>
+          <div>
+            <strong>Otevřeno každý den</strong>
+            <span>Po–Ne, snídaně až večeře</span>
+          </div>
+        </div>
+        <div class="highlight-divider"></div>
+        <div class="highlight-item reveal-left" style="--delay:0.1s">
+          <span class="highlight-icon">🪑</span>
+          <div>
+            <strong><span class="count" data-target="72">0</span> míst + terasa</strong>
+            <span>Velká restaurace + salónek</span>
+          </div>
+        </div>
+        <div class="highlight-divider"></div>
+        <div class="highlight-item reveal-left" style="--delay:0.2s">
+          <span class="highlight-icon">🍲</span>
+          <div>
+            <strong>Česká kuchyně</strong>
+            <span>Tradiční domácí recepty</span>
+          </div>
+        </div>
+        <div class="highlight-divider"></div>
+        <div class="highlight-item reveal-left" style="--delay:0.3s">
+          <span class="highlight-icon">💳</span>
+          <div>
+            <strong>Přijímáme stravenky</strong>
+            <span>Všechny hlavní druhy</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MENU PREVIEW ========== -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Naše nabídka</p>
+          <h2 class="section-title">Co u nás najdete</h2>
+          <div class="section-divider">
+            <span class="divider-line"></span>
+            <span class="divider-icon">🍴</span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card reveal" id="menu-card-daily">
+            <div class="card-icon-wrap">
+              <span class="card-icon">🥘</span>
+            </div>
+            <span class="card-badge">Každý den</span>
+            <h3 class="card-title">Denní menu</h3>
+            <p class="card-desc">Každý všední den připravujeme čerstvé polévky a teplá hlavní jídla za příznivé ceny. Ideální pro rychlý a výživný oběd.</p>
+            <div class="card-footer">
+              <span class="card-detail">Po–Pá · 10:30–14:00</span>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" id="menu-card-minutka" style="--card-delay:0.1s">
+            <div class="card-icon-wrap">
+              <span class="card-icon">🥩</span>
+            </div>
+            <h3 class="card-title">Minutky & dezerty</h3>
+            <p class="card-desc">Vybírejte z bohaté nabídky minutkových jídel připravených na počkání — od svíčkové po smažený sýr a domácí moučníky.</p>
+            <div class="card-footer">
+              <span class="card-detail">Celý den</span>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" id="menu-card-friday" style="--card-delay:0.2s">
+            <div class="card-icon-wrap">
+              <span class="card-icon">🍜</span>
+            </div>
+            <span class="card-badge card-badge-special">Páteční specialita</span>
+            <h3 class="card-title">Páteční specialita</h3>
+            <p class="card-desc">Každý pátek připravujeme <em>tradiční držkovou polévku</em> — hustou, voňavou a přesně takovou, jakou znáte od babičky.</p>
+            <div class="card-footer">
+              <span class="card-detail card-highlight">Držková každý pátek</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="menu-cta reveal">
+          <a href="menu.html" class="link-amber" id="full-menu-link">Celý jídelní lístek →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT / ATMOSPHERE ========== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p class="section-eyebrow">O nás</p>
+            <h2 class="section-title about-title">Místo, kde se<br>cítíte jako doma</h2>
+            <p class="about-body">Vítejte v restauraci Na Růžku — místě, kde se snoubí tradiční česká kuchyně s přátelskou atmosférou. Vaříme z čerstvých surovin, poctivě a s láskou, přesně tak, jak to znáte z domova.</p>
+            <p class="about-body">Disponujeme <strong>72místnou restaurací</strong>, útulným <strong>45místným salónkem pro nekuřáky</strong> v prvním patře a příjemnou <strong>letní terasou</strong>. Jsme ideálním místem pro rodinné obědy, pracovní setkání i společenské akce.</p>
+            <a href="#events" class="link-amber about-link" id="history-link">Něco o naší historii →</a>
+          </div>
+          <div class="about-images reveal-right">
+            <div class="image-collage">
+              <div class="collage-img collage-1">
+                <img src="img/svickova.png" alt="Svíčková na smetaně" loading="lazy" />
+              </div>
+              <div class="collage-img collage-2">
+                <img src="img/gulas.png" alt="Guláš s knedlíkem" loading="lazy" />
+              </div>
+              <div class="collage-img collage-3">
+                <img src="img/dzkova.png" alt="Držková polévka" loading="lazy" />
+              </div>
+              <div class="collage-img collage-4">
+                <img src="img/dessert.png" alt="Dezert" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HOURS + MAP ========== -->
+    <section class="hours-section" id="hours">
+      <div class="hours-grid">
+        <div class="hours-left reveal">
+          <p class="section-eyebrow light">Kdy nás najdete</p>
+          <h2 class="section-title light">
+            <span class="hours-icon">🕐</span> Otevírací doba
+          </h2>
+          <div class="hours-table">
+            <div class="hours-row">
+              <span class="hours-day">Pondělí – Pátek</span>
+              <div class="hours-time-wrap">
+                <span class="hours-time">7:00 – 21:00</span>
+                <span class="badge-open">Otevřeno</span>
+              </div>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Sobota</span>
+              <div class="hours-time-wrap">
+                <span class="hours-time">8:00 – 22:00</span>
+                <span class="badge-open">Otevřeno</span>
+              </div>
+            </div>
+            <div class="hours-row">
+              <span class="hours-day">Neděle</span>
+              <div class="hours-time-wrap">
+                <span class="hours-time">9:00 – 20:00</span>
+                <span class="badge-open">Otevřeno</span>
+              </div>
+            </div>
+            <div class="hours-row hours-note-row">
+              <span class="hours-note">Kuchyně zavírá 30 min před koncem</span>
+            </div>
+          </div>
+          <div class="contact-quick">
+            <a href="tel:+420583445282" class="phone-link" id="phone-link-1">
+              <span class="phone-icon">📞</span> 583 445 282
+            </a>
+            <a href="tel:+420601322203" class="phone-link" id="phone-link-2">
+              <span class="phone-icon">📱</span> 601 322 203
+            </a>
+          </div>
+        </div>
+        <div class="hours-right reveal-right">
+          <div class="map-wrap">
+            <iframe
+              id="restaurant-map"
+              title="Mapa restaurace Na Růžku"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2577.5897048!2d16.9298!3d49.7738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47145bc0a4b60001%3A0x400af0f66154100!2sOlomoucká+146%2C+789+83+Loštice!5e0!3m2!1scs!2scz!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="map-address">
+            <span class="addr-icon">📍</span>
+            <div>
+              <strong>Olomoucká 146, Loštice 789 83</strong>
+              <span>Olomoucký kraj, Česká republika</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GALLERY ========== -->
+    <section class="gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow light">Naše jídla</p>
+          <h2 class="section-title light">Ukázky našich jídel</h2>
+          <div class="section-divider light">
+            <span class="divider-line"></span>
+            <span class="divider-icon">🍽</span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-strip-wrap">
+        <div class="gallery-strip" id="gallery-strip">
+          <div class="gallery-item">
+            <img src="img/svickova.png" alt="Svíčková na smetaně" loading="lazy" />
+            <div class="gallery-caption">Svíčková na smetaně</div>
+          </div>
+          <div class="gallery-item">
+            <img src="img/gulas.png" alt="Guláš s knedlíkem" loading="lazy" />
+            <div class="gallery-caption">Hovězí guláš</div>
+          </div>
+          <div class="gallery-item">
+            <img src="img/dzkova.png" alt="Držková polévka" loading="lazy" />
+            <div class="gallery-caption">Držková polévka</div>
+          </div>
+          <div class="gallery-item">
+            <img src="img/koleno.png" alt="Vepřové koleno" loading="lazy" />
+            <div class="gallery-caption">Vepřové koleno</div>
+          </div>
+          <div class="gallery-item">
+            <img src="img/dessert.png" alt="Dezert" loading="lazy" />
+            <div class="gallery-caption">Domácí dezerty</div>
+          </div>
+          <!-- duplicated for seamless loop -->
+          <div class="gallery-item">
+            <img src="img/svickova.png" alt="Svíčková na smetaně" loading="lazy" aria-hidden="true" />
+            <div class="gallery-caption">Svíčková na smetaně</div>
+          </div>
+          <div class="gallery-item">
+            <img src="img/gulas.png" alt="Guláš s knedlíkem" loading="lazy" aria-hidden="true" />
+            <div class="gallery-caption">Hovězí guláš</div>
+          </div>
+          <div class="gallery-item">
+            <img src="img/koleno.png" alt="Vepřové koleno" loading="lazy" aria-hidden="true" />
+            <div class="gallery-caption">Vepřové koleno</div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-cta reveal">
+        <a href="#contact" class="btn btn-primary" id="gallery-cta-btn">Zobrazit galerii</a>
+      </div>
+    </section>
+
+    <!-- ========== EVENTS / SALON ========== -->
+    <section class="events-section" id="events">
+      <div class="container">
+        <div class="events-grid">
+          <div class="events-text reveal">
+            <p class="section-eyebrow">Soukromé akce</p>
+            <h2 class="section-title events-title">Plánujete oslavu nebo<br>firemní akci?</h2>
+            <p class="events-body">Náš salónek v prvním patře je ideálním prostorem pro vaše soukromé akce. Zajistíme profesionální obsluhu, individuální menu a příjemnou atmosféru.</p>
+            <a href="#contact" class="btn btn-primary events-btn" id="events-cta-btn">Poptat akci</a>
+          </div>
+          <div class="events-features reveal">
+            <ul class="features-list">
+              <li class="feature-item">
+                <span class="feature-check">✓</span>
+                <div>
+                  <strong>Salónek v 1. patře</strong>
+                  <span>45 pohodlných míst k sezení</span>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-check">✓</span>
+                <div>
+                  <strong>Nekuřácké prostředí</strong>
+                  <span>Příjemné pro celou rodinu</span>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-check">✓</span>
+                <div>
+                  <strong>Individuální menu</strong>
+                  <span>Sestavíme jídelníček dle vašich přání</span>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-check">✓</span>
+                <div>
+                  <strong>Různé příležitosti</strong>
+                  <span>Oslavy, firemní večírky, rodinné akce</span>
+                </div>
+              </li>
+              <li class="feature-item">
+                <span class="feature-check">✓</span>
+                <div>
+                  <strong>Venkovní terasa</strong>
+                  <span>K dispozici v letním období</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow light">Navštivte nás</p>
+          <h2 class="section-title light">Přijďte nás navštívit</h2>
+          <div class="section-divider light">
+            <span class="divider-line"></span>
+            <span class="divider-icon">📍</span>
+            <span class="divider-line"></span>
+          </div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="info-block">
+              <h3 class="info-title">Adresa</h3>
+              <p>Olomoucká 146<br>Loštice, 789 83</p>
+            </div>
+            <div class="info-block">
+              <h3 class="info-title">Telefon</h3>
+              <a href="tel:+420583445282" class="info-link" id="contact-phone-1">583 445 282</a>
+              <a href="tel:+420601322203" class="info-link" id="contact-phone-2">601 322 203</a>
+            </div>
+            <div class="info-block">
+              <h3 class="info-title">E-mail</h3>
+              <a href="mailto:info@naruzku.cz" class="info-link" id="contact-email">restaurace@naruzku.cz</a>
+            </div>
+            <div class="info-block">
+              <h3 class="info-title">Sledujte nás</h3>
+              <div class="social-links-row">
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" id="facebook-link">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.95.93-1.95 1.88v2.26h3.32l-.53 3.5h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+                  Facebook
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link social-link-ig" id="instagram-link">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-wrap reveal">
+            <form class="contact-form" id="contact-form" novalidate>
+              <h3 class="form-title">Napište nám nebo rezervujte stůl</h3>
+              <div class="form-group">
+                <label for="form-name">Jméno a příjmení</label>
+                <input type="text" id="form-name" name="name" placeholder="Vaše jméno" required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="form-contact">Telefon nebo e-mail</label>
+                <input type="text" id="form-contact" name="contact" placeholder="Tel. nebo e-mail" required autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="form-message">Zpráva nebo dotaz</label>
+                <textarea id="form-message" name="message" rows="4" placeholder="Napište nám..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="form-submit">Odeslat zprávu</button>
+              <p class="form-note">Odpovíme do 24 hodin. Nebo nám klidně zavolejte! 📞</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <span class="logo-icon">🍴</span>
+        <span class="logo-text">Na Růžku</span>
+      </div>
+      <p class="footer-tagline">Restaurace Na Růžku — Loštice</p>
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" id="footer-fb">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:15px;height:15px"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.49 0-1.95.93-1.95 1.88v2.26h3.32l-.53 3.5h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+          Facebook
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link footer-social-ig" id="footer-ig">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:15px;height:15px"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          Instagram
+        </a>
+      </div>
+      <nav class="footer-nav" aria-label="Patičková navigace">
+        <a href="menu.html">Jídelní lístek</a>
+        <a href="#hours">Otevírací doba</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#events">Akce</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <p class="footer-copy">© 2025 Restaurace Na Růžku. Všechna práva vyhrazena.</p>
+      <p class="footer-credit">Web vytvořen s ❤️ pro Loštice</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
