@@ -215,7 +215,7 @@ ul { list-style: none; }
 }
 
 .reveal          { transform: translateY(18px); }
-.reveal-left     { transform: translateX(-24px); transition-delay: var(--delay, .3s); }
+.reveal-left     { transform: translateX(-24px); transition-delay: var(--delay, 0s); }
 .reveal-right    { transform: translateX(24px); }
 
 .reveal.visible,
